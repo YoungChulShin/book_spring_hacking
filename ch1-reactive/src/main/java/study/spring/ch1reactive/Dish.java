@@ -2,7 +2,7 @@ package study.spring.ch1reactive;
 
 public class Dish {
 
-  private String description;
+  private final String description;
   private boolean delivered = false;
 
   public static Dish deliver(Dish dish) {
