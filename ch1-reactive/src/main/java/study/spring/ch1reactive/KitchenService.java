@@ -15,6 +15,17 @@ public class KitchenService {
         .delayElements(Duration.ofMillis(250));
   }
 
+  public Flux<Dish> getDish() {
+    return Flux.just(randomDish());
+  }
+
+  public Flux<Dish> getPreOrderDishes() {
+    return Flux.just(
+        menu.get(0),
+        menu.get(1),
+        menu.get(2));
+  }
+
   private Dish randomDish() {
     return menu.get(picker.nextInt(menu.size()));
   }

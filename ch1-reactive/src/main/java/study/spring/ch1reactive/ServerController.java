@@ -19,4 +19,14 @@ public class ServerController {
   Flux<Dish> serveDishes() {
     return this.kitchen.getDishes();
   }
+
+  @GetMapping(value = "/random-dish", produces = MediaType.APPLICATION_JSON_VALUE)
+  Flux<Dish> randomDishes() {
+    return this.kitchen.getDish();
+  }
+
+  @GetMapping(value = "/preorder-dishes", produces = MediaType.APPLICATION_JSON_VALUE)
+  Flux<Dish> preorderDishes() {
+    return this.kitchen.getPreOrderDishes();
+  }
 }
