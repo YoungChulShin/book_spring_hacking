@@ -1,4 +1,4 @@
-package study.spring.ch1reactive;
+package study.spring.ch1reactive.domain;
 
 import java.util.ArrayList;
 import java.util.List;
