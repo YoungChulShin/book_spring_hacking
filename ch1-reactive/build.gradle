@@ -18,6 +18,7 @@ dependencies {
 
     // 리액티브 버전 몽고디비
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     // 동기 몽고디비 드라이버
     implementation 'org.mongodb:mongodb-driver-sync'
     // 몽고디비 테스트
