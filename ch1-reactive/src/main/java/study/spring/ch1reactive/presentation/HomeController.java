@@ -21,8 +21,6 @@ public class HomeController {
 
   @GetMapping
   Mono<Rendering> home() {
-    //return Mono.just("home");
-
     return Mono.just(Rendering.view("home.html")
       .modelAttribute("items", this.itemRepository.findAll())
       .modelAttribute("cart", this.cartRepository.findById("My Cart").defaultIfEmpty(new Cart("My Cart")))
